@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StarRatings from "./StarRatings";
 import { ErrorBox, Loader } from "./App";
+import { useKeyPress } from "./useKeyPress";
 
 function MovieDetails({
   selectedID,
@@ -46,6 +47,7 @@ function MovieDetails({
       setErrorMsg(false);
     };
   }, [selectedID]);
+  useKeyPress("Escape", onCloseMovie);
   return (
     <>
       {isLoading && <Loader />}
