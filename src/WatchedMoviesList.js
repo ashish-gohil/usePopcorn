@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import MoviesSummary from "./MoviesSummary";
 import WatchedMovie from "./WatchedMovie";
 
